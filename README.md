@@ -45,13 +45,13 @@ python -m venv venv
 
 **Windows (PowerShell):**
 ```powershell
-.env\Scripts\Activate.ps1
+.env\Scripts\Activate.ps1
 ```
 
 Если ошибка политики выполнения:
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-.env\Scripts\Activate.ps1
+.env\Scripts\Activate.ps1
 ```
 
 **Windows (CMD):**
@@ -132,28 +132,6 @@ pytest tests/ -v
 - Валидация невалидных данных
 - Конкурентные депозиты и списания
 
-## Запуск через VS Code
-
-1. Открой папку `wallet-api` в VS Code
-2. Выбери Python-интерпретатор из `venv` (`Ctrl+Shift+P` → `Python: Select Interpreter`)
-3. Открой терминал (`Ctrl+\``)
-4. Выполни шаги 2-4 из раздела "Запуск"
-
-Или создай `.vscode/launch.json`:
-
-```json
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Run FastAPI",
-            "type": "debugpy",
-            "request": "launch",
-            "module": "uvicorn",
-            "args": ["app.main:app", "--reload"],
-            "jinja": true
-        }
-    ]
 }
 ```
 
