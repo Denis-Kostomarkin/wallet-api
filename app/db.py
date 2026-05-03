@@ -3,8 +3,6 @@ from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 
-# SQLite in-memory для простоты демонстрации
-# Для файловой БД: sqlite+aiosqlite:///./wallets.db
 engine = create_async_engine(
     "sqlite+aiosqlite:///./wallets.db",
     echo=False,
